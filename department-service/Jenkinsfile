@@ -33,7 +33,7 @@ spec:
   }
   environment {
     CREDS = credentials('fatima_docker_creds')
-    DOCKER_NAMESPACE = 'fatimahobaidan'
+    DOCKER_NAMESPACE = 'fatima'
     SERVICE_NAME = 'department-service'
     TOKEN=credentials('tester_token')
   }
