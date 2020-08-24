@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: department-service
-        image: fatimahobaidan/department-service
+        image: fatimahalobaidan/department-service
         ports:
         - containerPort: 80
