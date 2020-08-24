@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-site-service
+  labels:
+    app: project-site-service
+    type: index
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: project-site-service
+  template:
+    metadata:
+      labels:
+        app: project-site-service
+    spec:
+      containers:
+      - name: project-site-service
+        image: bhanbashi/project-site-service
+        ports:
+        - containerPort: 80
