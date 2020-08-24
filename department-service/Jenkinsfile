@@ -37,7 +37,7 @@ spec:
     SERVICE_NAME = 'department-service'
     TOKEN=credentials('tester_token')
   }
-  
+  stages {
       stage("Build") {
           steps {
               container('dnd') {
