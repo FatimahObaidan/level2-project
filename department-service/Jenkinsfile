@@ -36,8 +36,8 @@ spec:
     DOCKER_NAMESPACE = 'danya97'
     SERVICE_NAME = 'department-service'
     TOKEN=credentials('70e132db-c22c-4eac-9010-2a1c2462dd95')
-  }
-
+   }
+  stages {
       stage("Build") {
           steps {
               container('dnd') {
