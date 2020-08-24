@@ -32,8 +32,8 @@ spec:
     }
   }
   environment {
-    CREDS = credentials('bryan_docker_creds')
-    DOCKER_NAMESPACE = 'bryandollery'
+    CREDS = credentials('fatima_docker_creds')
+    DOCKER_NAMESPACE = 'fatimahobaidan'
     SERVICE_NAME = 'department-service'
     TOKEN=credentials('tester_token')
   }
