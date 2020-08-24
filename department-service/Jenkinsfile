@@ -33,9 +33,9 @@ spec:
   }
   environment {
     CREDS = credentials('fatima_docker_creds')
-    DOCKER_NAMESPACE = 'fatima'
+    DOCKER_NAMESPACE = 'fatimahobaidan'
     SERVICE_NAME = 'department-service'
-    TOKEN=credentials('tester_token')
+    TOKEN=credentials('	b1977c04-477c-4a75-b8ee-87828038438e')
   }
   stages {
       stage("Build") {
