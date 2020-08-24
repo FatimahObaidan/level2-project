@@ -37,7 +37,19 @@ spec:
     SERVICE_NAME = 'department-service'
     TOKEN=credentials('70e132db-c22c-4eac-9010-2a1c2462dd95')
    }
-  stages {
+ 
+    stages {
+      stage("debug") {
+          steps {
+              container('kubectl') {
+                  sh '''
+                      cd $SERVICE_NAME
+                      kubectl --token=$TOKEN -n tester get all
+                  '''
+              }
+          }
+      }
+
       stage("Build") {
           steps {
               container('dnd') {
