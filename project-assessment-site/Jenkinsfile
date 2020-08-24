@@ -6,7 +6,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    service_name: project-site-service
+    service_name: project-assessment-site
     service_type: INDEX
 spec:
   containers:
@@ -34,7 +34,7 @@ spec:
   environment {
     CREDS = credentials('bandar_docker_creds')
     DOCKER_NAMESPACE = 'bhanbashi'
-    SERVICE_NAME = 'project-site-service'
+    SERVICE_NAME = 'project-assessment-site'
     TOKEN=credentials('169cb883-2e0e-446c-aa9e-0bc89b834c99')
   }
   stages {
