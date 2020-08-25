@@ -63,9 +63,9 @@ spec:
               container('kubectl') {
                   sh '''
                       cd $SERVICE_NAME
-                      kubectl --token=$TOKEN -n office get all
-                      kubectl --token=$TOKEN -n office apply -f deploy.yaml -f service.yaml
-                      kubectl --token=$TOKEN -n office get all
+                      kubectl --token=$TOKEN -n office-service get all
+                      kubectl --token=$TOKEN -n office-service apply -f deploy.yaml -f service.yaml
+                      kubectl --token=$TOKEN -n office-service get all
                   '''
               }
           }
