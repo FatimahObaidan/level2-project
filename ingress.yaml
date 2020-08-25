@@ -11,7 +11,7 @@ spec:
       paths:
       - path: /office
         backend:
-          serviceName: office
+          serviceName: office-service
           servicePort: 80
           paths:
       - path: /
@@ -21,15 +21,15 @@ spec:
           paths:
       - path: /role
         backend:
-          serviceName: role
+          serviceName: role-service
           servicePort: 80
           paths:
       - path: /department
         backend:
-          serviceName: department
+          serviceName: department-service
           servicePort: 80
           paths:
       - path: /person
         backend:
-          serviceName: person
+          serviceName: person-service
           servicePort: 80
