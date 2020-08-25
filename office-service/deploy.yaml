@@ -16,7 +16,7 @@ spec:
         app: office-service
     spec:
       containers:
-      - name: department-service
+      - name: office-service
         image: fatimahobaidan/office-service
         ports:
         - containerPort: 80
