@@ -18,3 +18,8 @@ spec:
             backend:
               serviceName: project-assessment-site
               servicePort: 80
+          - path: /person
+            backend:
+              serviceName: person-service
+              servicePort: 80
+
