@@ -1,35 +1,35 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: "level2-project"
+  name: level2-project
   namespace: test
   annotations: 
      ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-    http:
+  - http:
       paths:
-        path: /office
+      - path: /office
         backend:
-          serviceName: office-service
+          serviceName: office
           servicePort: 80
           paths:
-        path: /
+      - path: /
         backend:
           serviceName: project-assessment-site
           servicePort: 80
           paths:
-        path: /role
+      - path: /role
         backend:
-          serviceName: role-service
+          serviceName: role
           servicePort: 80
           paths:
-        path: /department
+      - path: /department
         backend:
-          serviceName: department-service
+          serviceName: department
           servicePort: 80
           paths:
-        path: /person
+      - path: /person
         backend:
-          serviceName: person-service
+          serviceName: person
           servicePort: 80
