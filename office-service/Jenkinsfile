@@ -10,7 +10,7 @@ metadata:
     service_type: REST
 spec:
   containers:
-  - name: dnd
+  - name: dod
     image: docker:latest
     command: 
     - cat
@@ -40,7 +40,7 @@ spec:
   stages {
       stage("Build") {
           steps {
-              container('dnd') {
+              container('dod') {
                   sh '''
                       cd $SERVICE_NAME
                       docker build --tag $DOCKER_NAMESPACE/$SERVICE_NAME .
@@ -50,7 +50,7 @@ spec:
       }
       stage("Release") {
           steps {
-              container('dnd') {
+              container('dod') {
                   sh '''
                       docker login -p $CREDS_PSW -u $CREDS_USR
                       docker push $DOCKER_NAMESPACE/$SERVICE_NAME
@@ -63,9 +63,9 @@ spec:
               container('kubectl') {
                   sh '''
                       cd $SERVICE_NAME
-                      kubectl --token=$TOKEN -n office get all
-                      kubectl --token=$TOKEN -n office apply -f deploy.yaml -f service.yaml
-                      kubectl --token=$TOKEN -n office get all
+                      kubectl --token=$TOKEN -n test get all
+                      kubectl --token=$TOKEN -n test apply -f deploy.yaml -f service.yaml
+                      kubectl --token=$TOKEN -n test get all
                   '''
               }
           }
