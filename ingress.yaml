@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: ingress
+kind: Ingress
 metadata:
-  name: level2-project
+  name: "level2-project"
   namespace: test
   annotations: 
      ingress.kubernetes.io/ssl-redirect: "false"
