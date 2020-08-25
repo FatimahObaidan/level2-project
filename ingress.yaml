@@ -13,22 +13,18 @@ spec:
         backend:
           serviceName: office-service
           servicePort: 80
-          paths:
       - path: /
         backend:
           serviceName: project-assessment-site
           servicePort: 80
-          paths:
       - path: /role
         backend:
           serviceName: role-service
           servicePort: 80
-          paths:
       - path: /department
         backend:
           serviceName: department-service
           servicePort: 80
-          paths:
       - path: /person
         backend:
           serviceName: person-service
