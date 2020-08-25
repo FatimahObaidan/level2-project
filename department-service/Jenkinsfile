@@ -35,7 +35,7 @@ spec:
     CREDS = credentials('bandar_docker_creds')
     DOCKER_NAMESPACE = 'bhanbashi'
     SERVICE_NAME = 'department-service'
-    TOKEN=credentials('169cb883-2e0e-446c-aa9e-0bc89b834c99')
+    TOKEN=credentials('9eb91f3a-9fed-4033-b763-8cc8c15ed04a')
   }
   stages {
       stage("Build") {
