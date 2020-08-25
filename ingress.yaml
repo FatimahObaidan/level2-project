@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: ingress
+metadata:
+  name: level2-project
+  namespace: level2-project
+  annotations: 
+     ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rule:
+    http:
+      paths:
+        path: /office
+        backend:
+          serviceName: office
+          servicePort: 80
+          paths:
+        path: /
+        backend:
+          serviceName: project
+          servicePort: 80
+          paths:
+        path: /role
+        backend:
+          serviceName: role
+          servicePort: 80
+          paths:
+        path: /department
+        backend:
+          serviceName: department
+          servicePort: 80
+          paths:
+        path: /person
+        backend:
+          serviceName: person
+          servicePort: 80
