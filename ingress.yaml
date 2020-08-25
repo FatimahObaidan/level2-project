@@ -1,7 +1,7 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: level2-project
+  name: test
   namespace: test
   annotations: 
      ingress.kubernetes.io/ssl-redirect: "false"
